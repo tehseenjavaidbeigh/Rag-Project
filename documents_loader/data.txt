@@ -1,0 +1,6 @@
+**Machine Learning (ML)** is a field within Artificial Intelligence that focuses on building systems capable of learning from data
+and improving their performance over time without being explicitly programmed. Instead of following fixed rules, ML algorithms identify 
+patterns in data and use those patterns to make predictions or decisions. Common applications include recommendation systems (like those 
+used by Netflix and Amazon), speech recognition, image classification, and fraud detection. Machine learning models are typically trained 
+on large datasets and can be categorized into supervised, unsupervised, and reinforcement learning, each suited to different types of problems. 
+As data availability and computing power continue to grow, ML is becoming a central technology driving innovation across industries.
