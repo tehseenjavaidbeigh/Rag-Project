@@ -2,9 +2,19 @@ from dotenv import load_dotenv
 from langchain_mistralai import ChatMistralAI
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_core.prompts import ChatPromptTemplate
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 load_dotenv()
 data = PyPDFLoader("documents_loader/dataset.pdf")
 docs = data.load()
+
+
+splitter = RecursiveCharacterTextSplitter(
+    chunk_size = 1000,
+    chunk_overlap =200
+)
+
+chunks = splitter.split_documents(docs)
+
 model = ChatMistralAI(model = "mistral-small-2506")
 template =ChatPromptTemplate.from_messages(
     [("system","You are an AI that summarises the text"),
